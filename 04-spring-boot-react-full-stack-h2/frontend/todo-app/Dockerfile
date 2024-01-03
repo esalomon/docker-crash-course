@@ -1,11 +1,14 @@
 ## Stage 1 - Lets build the "deployable package"
-FROM node:7.10 as frontend-build
+FROM node:18 as frontend-build
 WORKDIR /fullstack/frontend
 
 # Step 1 - Download all package dependencies first.
 # We will redownload dependencies only when packages change.
 COPY package.json package-lock.json ./
 RUN npm install
+
+# Fixes the legacy SSL provider issue.
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # Step 2 - Copy all source and run build
 COPY . ./
