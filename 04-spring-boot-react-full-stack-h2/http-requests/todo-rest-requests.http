@@ -1,0 +1,13 @@
+### Genearate a token
+POST http://localhost:8080/authenticate
+Content-Type: application/json
+
+{
+  "username":"in28minutes",
+  "password":"dummy"
+}
+
+### Get all todos
+GET http://localhost:8080/jpa/users/in28minutes/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbjI4bWludXRlcyIsImV4cCI6MTcwNDgyODgwMCwiaWF0IjoxNzA0MjI0MDAwfQ.QlWyXRl2FiWdtleDpIXzyPfpjWilZeYKX02YdDd7VlhPicYmtW4GN_R7zH83ZLa9zyf-A4lzjT3OxINlhaCs6Q
