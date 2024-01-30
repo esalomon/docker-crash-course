@@ -97,7 +97,7 @@
 				</configuration>
 			</plugin>-->
 
-			<plugin>
+			<plugin> <!-- Reference: https://dmp.fabric8.io/-->
 				<groupId>io.fabric8</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.43.0</version>
